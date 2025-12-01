@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
+import "./globals.css"; // Ensure this path is correct based on where you put globals.css
 import Header from "@/components/layout/Header";
 import CTA from "@/components/layout/CTA";
-import Footer from "@/components/layout/Footer"; // Import Footer
+import Footer from "@/components/layout/Footer";
 import { getGlobalData } from "@/data/loader";
 
 const poppins = Poppins({
@@ -17,12 +17,19 @@ export const metadata: Metadata = {
   description: "Transform Your HR Strategy with Socle RH",
 };
 
+// 1. Define props to accept params
 export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
-  const globalData = await getGlobalData();
+  params: Promise<{ lang: string }>; // Next.js 15 requires awaiting params
+}) {
+  // 2. Await and extract the language
+  const { lang } = await params;
+
+  // 3. Fetch global data using the dynamic language
+  const globalData = await getGlobalData(lang);
 
   const headerData = globalData?.data?.blocks?.find(
     (b: any) => b.__component === "layout.header"
@@ -37,18 +44,17 @@ export default async function RootLayout({
   );
 
   return (
-    <html lang="en">
+    // 4. Set the html lang attribute dynamically
+    <html lang={lang}>
       <body
         className={`${poppins.variable} antialiased flex flex-col min-h-screen`}
       >
-        <Header data={headerData} />
+        {/* 5. Pass lang to Header so the switcher works */}
+        <Header data={headerData} lang={lang} />
 
         <main className="grow">{children}</main>
 
-        {/* Global CTA handles its own visibility (hides on /contact) */}
         <CTA data={ctaData} />
-
-        {/* Footer */}
         <Footer data={footerData} />
       </body>
     </html>

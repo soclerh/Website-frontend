@@ -4,8 +4,15 @@ import HeroSection from "@/components/homepage/HeroSection";
 import SeeWhat from "@/components/homepage/SeeWhat";
 import { getHomepageData } from "@/data/loader";
 
-export default async function Home() {
-  const response = await getHomepageData();
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+
+  // 3. Pass lang to the data loader
+  const response = await getHomepageData(lang);
 
   if (!response.data) return null;
 
