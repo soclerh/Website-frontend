@@ -67,7 +67,7 @@ export default function Header({ data, lang }: { data: any; lang: string }) {
   const currentLabel = lang === "fr" ? "Français" : "English";
 
   return (
-    <header className="top-0 left-0 right-0 z-50 backdrop-blur-md sticky">
+    <header className="top-0 left-0 right-0 z-50 backdrop-blur-sm sticky">
       <div className="container mx-auto px-4 md:px-16 h-20 lg:py-20 flex items-center justify-between">
         {/* LOGO */}
         <Link

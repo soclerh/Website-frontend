@@ -8,8 +8,11 @@ import { usePathname } from "next/navigation";
 export default function CTA({ data }: { data: any }) {
   const pathname = usePathname();
 
-  // HIDE this component if we are on the contact page
-  if (!data || pathname === "/contact") return null;
+  // HIDE this component if we are on the contact page.
+  // We check if the path includes "/contact" to handle locales (e.g., /en/contact, /fr/contact).
+  const isContactPage = pathname?.includes("/contact");
+
+  if (!data || isContactPage) return null;
 
   const { title, description, button } = data;
   const iconUrl = button?.icon ? getStrapiMedia(button.icon.url) : null;

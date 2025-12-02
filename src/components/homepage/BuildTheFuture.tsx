@@ -5,7 +5,7 @@ export default function BuildTheFuture({ data }: { data: any }) {
   const { title, description, cards } = data;
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-10">
       <div className="container mx-auto px-4 md:px-6">
         {/* HEADER SECTION */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16">
@@ -30,7 +30,8 @@ export default function BuildTheFuture({ data }: { data: any }) {
             return (
               <div
                 key={card.id}
-                className="bg-white rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300 border border-gray-100 flex flex-col items-start h-full"
+                // CHANGED: Added 'hover:border-[#333C88]' and switched 'transition-shadow' to 'transition-all'
+                className="bg-white rounded-2xl p-8 hover:shadow-lg border border-gray-100 hover:border-[#333C88] transition-all duration-300 flex flex-col items-start h-full"
               >
                 {/* ICON */}
                 <div className="mb-6 relative w-12 h-12 flex items-center justify-center rounded-lg bg-[#A38732]/10">
