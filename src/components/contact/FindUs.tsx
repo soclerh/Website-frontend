@@ -1,10 +1,10 @@
-export default function FindUs() {
+export default function FindUs({ dict }: { dict: any }) {
   return (
     <section className="bg-[#FDFBF9] py-16 md:py-24 pt-0">
       <div className="container mx-auto px-4 md:px-6">
         {/* SECTION TITLE */}
         <h2 className="text-3xl md:text-5xl font-bold text-[#171717] mb-8 md:mb-12">
-          Find Us
+          {dict.findUs}
         </h2>
 
         {/* MAP CONTAINER */}

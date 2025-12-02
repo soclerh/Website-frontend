@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getStrapiMedia } from "@/lib/utils";
 
-export default function AllBlogs({ data }: { data: any[] }) {
+export default function AllBlogs({ data, dict }: { data: any[]; dict: any }) {
   return (
     <section className="py-12 md:py-16 bg-[#FDFBF9]">
       <div className="container mx-auto px-4 md:px-6">
@@ -10,10 +10,10 @@ export default function AllBlogs({ data }: { data: any[] }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#171717] mb-3">
-              Latest Blogs
+              {dict.latestTitle}
             </h2>
             <p className="text-gray-500 text-sm md:text-base">
-              Fresh posts based on your topic and search filters.
+              {dict.latestSubtitle}
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function AllBlogs({ data }: { data: any[] }) {
             >
               <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
             </svg>
-            Filters
+            {dict.filters}
             <svg
               className="w-4 h-4 ml-1"
               fill="none"
@@ -61,8 +61,6 @@ export default function AllBlogs({ data }: { data: any[] }) {
             return (
               <div
                 key={blog.id}
-                // Mobile: white bg, rounded corners, shadow.
-                // Desktop (md+): transparent bg (letting SVG show), no border radius (SVG handles it), no shadow.
                 className="relative group w-full h-full bg-white md:bg-transparent rounded-2xl md:rounded-none shadow-sm md:shadow-none overflow-hidden md:overflow-visible"
               >
                 {/* Card Background using Bg.svg - HIDDEN ON MOBILE */}

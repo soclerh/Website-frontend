@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ dict }: { dict: any }) {
   // Simple state to handle form data
   const [formData, setFormData] = useState({
     name: "",
@@ -33,10 +33,10 @@ export default function ContactForm() {
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#333C88] mb-3">
-            Send Us a Message
+            {dict.formTitle}
           </h2>
           <p className="text-gray-500 text-sm md:text-base">
-            Fill out the form below and we'll get back to you within 24 hours.
+            {dict.formSubtitle}
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function ContactForm() {
                 htmlFor="name"
                 className="block text-sm font-bold text-gray-700"
               >
-                Name
+                {dict.labels.name}
               </label>
               <input
                 id="name"
@@ -67,7 +67,7 @@ export default function ContactForm() {
                 htmlFor="phone"
                 className="block text-sm font-bold text-gray-700"
               >
-                Phone
+                {dict.labels.phone}
               </label>
               <input
                 id="phone"
@@ -87,7 +87,7 @@ export default function ContactForm() {
               htmlFor="email"
               className="block text-sm font-bold text-gray-700"
             >
-              Email
+              {dict.labels.email}
             </label>
             <input
               id="email"
@@ -107,7 +107,7 @@ export default function ContactForm() {
               htmlFor="type"
               className="block text-sm font-bold text-gray-700"
             >
-              I am a
+              {dict.labels.type}
             </label>
             <div className="relative">
               <select
@@ -149,7 +149,7 @@ export default function ContactForm() {
               htmlFor="message"
               className="block text-sm font-bold text-gray-700"
             >
-              Message
+              {dict.labels.message}
             </label>
             <textarea
               id="message"
@@ -167,13 +167,12 @@ export default function ContactForm() {
             type="submit"
             className="w-full bg-[#333C88] text-white font-bold py-4 rounded-lg hover:bg-[#2a3170] transition-transform duration-200 hover:scale-[1.01] shadow-md"
           >
-            Send Message
+            {dict.labels.submit}
           </button>
 
           {/* Disclaimer */}
           <p className="text-center text-xs text-gray-500 mt-4">
-            By submitting this form, you agree to our privacy policy and consent
-            to being contacted about your enquiry.
+            {dict.disclaimer}
           </p>
         </form>
       </div>

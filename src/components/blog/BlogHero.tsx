@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function BlogHero() {
+export default function BlogHero({ dict }: { dict: any }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e: React.FormEvent) => {
@@ -15,18 +15,17 @@ export default function BlogHero() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         {/* Gold Tag */}
         <span className="block text-[#A38732] font-bold text-xl mb-4 tracking-wide">
-          Blogs
+          {dict.tag}
         </span>
 
         {/* Title */}
         <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#333C88] mb-6 tracking-tight">
-          Insights & Resources
+          {dict.title}
         </h1>
 
         {/* Description */}
-        <p className="text-[#171717] text-lg md:text-xl leading-relaxed  mx-auto mb-10 text-gray-600">
-          Expert advice, industry trends, and strategic guides for HR
-          professionals and leaders.
+        <p className="text-[#171717] text-lg md:text-xl leading-relaxed mx-auto mb-10 text-gray-600">
+          {dict.description}
         </p>
 
         {/* Search Bar */}
@@ -55,7 +54,7 @@ export default function BlogHero() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="block w-full pl-14 pr-6 py-4 rounded-full border border-gray-200 bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#333C88]/20 focus:border-[#333C88] shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(0,0,0,0.08)]"
-              placeholder="Search Blogs"
+              placeholder={dict.searchPlaceholder}
             />
           </div>
         </form>

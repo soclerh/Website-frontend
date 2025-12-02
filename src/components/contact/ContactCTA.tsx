@@ -1,4 +1,4 @@
-export default function ContactCTA() {
+export default function ContactCTA({ dict }: { dict: any }) {
   return (
     <section className="py-10 lg:px-12 md:py-10">
       <div className="container mx-auto px-4 md:px-6">
@@ -8,7 +8,7 @@ export default function ContactCTA() {
             {/* LEFT SIDE: Main Title */}
             <div className="w-full md:w-1/2">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold lg:max-w-lg leading-tight">
-                Feel free to visit us
+                {dict.cta.title}
               </h2>
             </div>
 
@@ -16,7 +16,7 @@ export default function ContactCTA() {
             {/* On mobile, it aligns left. On desktop (md+), it aligns right to match design */}
             <div className="w-full md:w-auto flex flex-col items-start md:items-start min-w-[300px]">
               <h3 className="text-xl md:text-2xl font-bold mb-6">
-                Business Hours
+                {dict.cta.hoursTitle}
               </h3>
 
               {/* Hours List */}
@@ -24,19 +24,25 @@ export default function ContactCTA() {
                 {/* Row 1 */}
                 <div className="flex justify-between gap-12 border-b border-white/10 pb-2 md:border-none md:pb-0">
                   <span className="font-medium text-white/90">
-                    Monday - Friday
+                    {dict.cta.monFri}
                   </span>
                   <span className="font-bold">9:00 AM - 6:00 PM</span>
                 </div>
                 {/* Row 2 */}
                 <div className="flex justify-between gap-12 border-b border-white/10 pb-2 md:border-none md:pb-0">
-                  <span className="font-medium text-white/90">Saturday</span>
+                  <span className="font-medium text-white/90">
+                    {dict.cta.sat}
+                  </span>
                   <span className="font-bold">10:00 AM - 2:00 PM</span>
                 </div>
                 {/* Row 3 */}
                 <div className="flex justify-between gap-12">
-                  <span className="font-medium text-white/90">Sunday</span>
-                  <span className="font-bold text-[#A38732]">Closed</span>
+                  <span className="font-medium text-white/90">
+                    {dict.cta.sun}
+                  </span>
+                  <span className="font-bold text-[#A38732]">
+                    {dict.cta.closed}
+                  </span>
                 </div>
               </div>
             </div>
