@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function Article({ data }: { data: any }) {
   const imageUrl = getStrapiMedia(data.bg?.url);

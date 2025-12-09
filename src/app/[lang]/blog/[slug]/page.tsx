@@ -1,6 +1,6 @@
-import Article from "@/components/blog/Article";
-import { getBlogBySlug } from "@/data/loader";
 import { notFound } from "next/navigation";
+import { getBlogBySlug } from "../../../../data/loader";
+import Article from "../../../../components/blog/Article";
 
 // Define params type correctly for Next.js 15/16
 type Props = {

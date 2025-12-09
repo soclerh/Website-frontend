@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css"; // Ensure this path is correct based on where you put globals.css
-import Header from "@/components/layout/Header";
-import CTA from "@/components/layout/CTA";
-import Footer from "@/components/layout/Footer";
-import { getGlobalData } from "@/data/loader";
+import { getGlobalData } from "../../data/loader";
+import Header from "../../components/layout/Header";
+import CTA from "../../components/layout/CTA";
+import Footer from "../../components/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],

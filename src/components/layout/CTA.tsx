@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+
 import { usePathname } from "next/navigation";
+import { getStrapiMedia } from "../../lib/utils";
 
 export default function CTA({ data }: { data: any }) {
   const pathname = usePathname();

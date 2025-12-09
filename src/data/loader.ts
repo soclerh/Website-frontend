@@ -1,6 +1,6 @@
-import { fetchAPI } from "@/utils/fetch-api";
-import { getStrapiURL } from "@/utils/get-strapi-url";
 import qs from "qs";
+import { getStrapiURL } from "../utils/get-strapi-url";
+import { fetchAPI } from "../utils/fetch-api";
 
 // 1. Update homepageQuery to accept locale
 const homepageQuery = (locale: string) =>
@@ -52,7 +52,7 @@ const homepageQuery = (locale: string) =>
   });
 
 // CHANGED DEFAULT: "en" -> "en-US"
-export async function getHomepageData(lang: string = "en") {
+export async function getHomepageData(lang: string = "fr") {
   const path = "/api/homepage";
   const BASE_URL = getStrapiURL();
   const url = new URL(path, BASE_URL);
@@ -110,7 +110,7 @@ const globalQuery = (locale: string) =>
   });
 
 // CHANGED DEFAULT: "en" -> "en-US"
-export async function getGlobalData(lang: string = "en") {
+export async function getGlobalData(lang: string = "fr") {
   const path = "/api/global";
   const BASE_URL = getStrapiURL();
   const url = new URL(path, BASE_URL);
@@ -182,7 +182,7 @@ function buildPageQuery(slug: string, locale: string) {
 }
 
 // CHANGED DEFAULT: "en" -> "en-US"
-export async function getPageData(slug: string, lang: string = "en") {
+export async function getPageData(slug: string, lang: string = "fr") {
   const BASE_URL = getStrapiURL();
   const query = buildPageQuery(slug, lang);
   const url = `${BASE_URL}/api/pages?${query}`;
@@ -200,7 +200,7 @@ const blogQuery = (locale: string) =>
   });
 
 // CHANGED DEFAULT: "en" -> "en-US"
-export async function getBlogData(lang: string = "en") {
+export async function getBlogData(lang: string = "fr") {
   const path = "/api/blogs";
   const BASE_URL = getStrapiURL();
   const url = new URL(path, BASE_URL);
@@ -209,7 +209,7 @@ export async function getBlogData(lang: string = "en") {
 }
 
 // CHANGED DEFAULT: "en" -> "en-US"
-export async function getBlogBySlug(slug: string, lang: string = "en") {
+export async function getBlogBySlug(slug: string, lang: string = "fr") {
   const BASE_URL = getStrapiURL();
   const query = qs.stringify({
     filters: { slug: { $eq: slug } },

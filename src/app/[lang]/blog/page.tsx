@@ -1,7 +1,9 @@
-import BlogHero from "@/components/blog/BlogHero";
-import AllBlogs from "@/components/blog/AllBlogs";
-import { getBlogData } from "@/data/loader";
-import { getDictionary } from "@/app/dictionaries"; // Import the dictionary
+// Import the dictionary
+
+import AllBlogs from "../../../components/blog/AllBlogs";
+import BlogHero from "../../../components/blog/BlogHero";
+import { getBlogData } from "../../../data/loader";
+import { getDictionary } from "../../dictionaries";
 
 export default async function Blog({
   params,

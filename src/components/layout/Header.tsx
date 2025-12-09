@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { getStrapiMedia } from "../../lib/utils";
 
 export default function Header({ data, lang }: { data: any; lang: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

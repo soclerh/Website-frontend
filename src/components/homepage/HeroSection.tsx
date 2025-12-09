@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function HeroSection({ data }: { data: any }) {
   const { title, description, trusted, button, icons, image } = data;
