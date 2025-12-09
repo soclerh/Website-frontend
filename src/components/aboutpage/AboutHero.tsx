@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function AboutHero({ data }: { data: any }) {
   const { tag, title, description, image } = data;

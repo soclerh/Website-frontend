@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 
 // CHANGE "en" TO "en-US"
 const SUPPORTED_LOCALES = ["en", "fr"];
-const DEFAULT_LOCALE = "en";
+const DEFAULT_LOCALE = "fr";
 
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;

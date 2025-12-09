@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function Footer({ data }: { data: any }) {
   if (!data) return null;

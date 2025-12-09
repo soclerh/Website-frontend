@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function AllBlogs({ data, dict }: { data: any[]; dict: any }) {
   return (

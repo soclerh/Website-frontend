@@ -1,8 +1,8 @@
-import ContactForm from "@/components/contact/ContactForm";
-import ContactHero from "@/components/contact/ContactHero";
-import FindUs from "@/components/contact/FindUs";
-import ContactCTA from "@/components/contact/ContactCTA";
-import { getDictionary } from "@/app/dictionaries";
+import ContactCTA from "../../../components/contact/ContactCTA";
+import ContactForm from "../../../components/contact/ContactForm";
+import ContactHero from "../../../components/contact/ContactHero";
+import FindUs from "../../../components/contact/FindUs";
+import { getDictionary } from "../../dictionaries";
 
 export default async function Contact({
   params,

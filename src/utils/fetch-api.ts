@@ -1,4 +1,4 @@
-import { getStrapiURL } from "@/utils/get-strapi-url";
+import { getStrapiURL } from "./get-strapi-url";
 
 type NextFetchRequestConfig = {
   revalidate?: number | false;

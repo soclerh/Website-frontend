@@ -1,6 +1,7 @@
-import { getStrapiURL } from "@/utils/get-strapi-url";
+// import { getStrapiURL } from "@/utils/get-strapi-url";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { getStrapiURL } from "../utils/get-strapi-url";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

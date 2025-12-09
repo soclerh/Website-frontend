@@ -1,9 +1,9 @@
-import AboutHero from "@/components/aboutpage/AboutHero";
-import OurMission from "@/components/aboutpage/OurMission";
-import OurStory from "@/components/aboutpage/OurStory";
-import OurTeam from "@/components/aboutpage/OurTeam";
-import WhyClient from "@/components/aboutpage/WhyClient";
-import { getPageData } from "@/data/loader";
+import AboutHero from "../../../components/aboutpage/AboutHero";
+import OurMission from "../../../components/aboutpage/OurMission";
+import OurStory from "../../../components/aboutpage/OurStory";
+import OurTeam from "../../../components/aboutpage/OurTeam";
+import WhyClient from "../../../components/aboutpage/WhyClient";
+import { getPageData } from "../../../data/loader";
 
 // 1. Add the params prop with the correct type
 export default async function About({

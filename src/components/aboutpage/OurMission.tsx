@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { getStrapiMedia } from "@/lib/utils";
+import { getStrapiMedia } from "../../lib/utils";
+// import { getStrapiMedia } from "@/lib/utils";
 
 export default function OurMission({ data }: { data: any }) {
   const { blueCard, cards } = data;

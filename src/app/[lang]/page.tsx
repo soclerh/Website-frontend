@@ -1,9 +1,16 @@
-import BuildTheFuture from "@/components/homepage/BuildTheFuture";
-import ExpertAdvice from "@/components/homepage/ExpertAdvice";
-import HeroSection from "@/components/homepage/HeroSection";
-import SeeWhat from "@/components/homepage/SeeWhat";
-import { getHomepageData, getBlogData } from "@/data/loader";
-import { getDictionary } from "@/app/dictionaries"; // 1. Import getDictionary
+// import BuildTheFuture from "@/components/HomePage/BuildTheFuture";
+// import ExpertAdvice from "@/components/HomePage/ExpertAdvice";
+// import HeroSection from "@/components/HomePage/HeroSection";
+// import SeeWhat from "@/components/HomePage/SeeWhat";
+// import { getHomepageData, getBlogData } from "@/lib/data/loader";
+// import { getDictionary } from "@/lib/dictionaries"; /
+
+import BuildTheFuture from "../../components/homepage/BuildTheFuture";
+import ExpertAdvice from "../../components/homepage/ExpertAdvice";
+import HeroSection from "../../components/homepage/HeroSection";
+import SeeWhat from "../../components/homepage/SeeWhat";
+import { getBlogData, getHomepageData } from "../../data/loader";
+import { getDictionary } from "../dictionaries";
 
 export default async function Home({
   params,
